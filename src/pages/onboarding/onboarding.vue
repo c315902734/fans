@@ -1,5 +1,5 @@
 <template>
-  <view class="onboarding-container">
+  <view class="onboarding-container" @click="navigateToCommunity">
     <view class="content-wrapper">
       <view class="logo-container">
         <view class="logo-circle">
@@ -11,13 +11,13 @@
                 <circle cx="35" cy="35" r="8"/>
                 <path d="M25 75 V65 C25 58 30 53 35 53 C40 53 45 58 45 65 V75"/>
                 <path d="M35 45 V53"/>
-                
+
                 <!-- Woman (right) -->
                 <circle cx="85" cy="35" r="8"/>
                 <path d="M75 75 V65 C75 58 80 53 85 53 C90 53 95 58 95 65 V75"/>
                 <path d="M85 45 V53"/>
                 <path d="M80 45 L90 45"/>
-                
+
                 <!-- Child (center bottom) -->
                 <circle cx="60" cy="55" r="6"/>
                 <path d="M52 85 V78 C52 73 56 69 60 69 C64 69 68 73 68 78 V85"/>
@@ -38,7 +38,13 @@ export default {
     return {}
   },
   onLoad() {},
-  methods: {}
+  methods: {
+    navigateToCommunity() {
+      uni.navigateTo({
+        url: '/pages/community/community'
+      })
+    }
+  }
 }
 </script>
 
