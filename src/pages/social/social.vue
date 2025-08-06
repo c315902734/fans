@@ -1,5 +1,5 @@
 <template>
-  <view class="community-container" @click="navigateToSocial">
+  <view class="social-container">
     <!-- Status Bar -->
     <view class="status-bar">
       <view class="time">9:41</view>
@@ -28,8 +28,8 @@
       <!-- Illustration Area -->
       <view class="illustration-container">
         <image 
-          class="community-illustration" 
-          src="https://cdn.builder.io/api/v1/image/assets%2F03bdf8e0f8b54edba10203afff5ff46f%2F3a7d76c053054c53aa119dddd3148a68?format=webp&width=800"
+          class="social-illustration" 
+          src="https://cdn.builder.io/api/v1/image/assets%2F03bdf8e0f8b54edba10203afff5ff46f%2F1851ca0b5be949b8a9ee5d1d2e74e1f7?format=webp&width=800"
           mode="aspectFit"
         />
       </view>
@@ -40,21 +40,19 @@
         <view class="gradient-background">
           <!-- Main Headline -->
           <view class="headline-container">
-            <text class="main-title">Find Community</text>
-            <text class="sub-title">Friends</text>
+            <text class="main-title">Like Comment and Share</text>
           </view>
 
           <!-- Description -->
           <view class="description-container">
-            <text class="description-line">Find People and opportunities</text>
-            <text class="description-line">Everyone and Everywhere</text>
+            <text class="description-text">A simple way to text, video chat and plan things all in one place.</text>
           </view>
 
           <!-- Pagination Dots -->
           <view class="pagination-dots">
             <view class="dot dot-inactive"></view>
-            <view class="dot dot-active"></view>
             <view class="dot dot-inactive"></view>
+            <view class="dot dot-active"></view>
           </view>
         </view>
       </view>
@@ -73,28 +71,12 @@ export default {
     return {}
   },
   onLoad() {},
-  methods: {
-    navigateToSocial() {
-      // Use direct window navigation for H5 platform
-      if (typeof window !== 'undefined') {
-        window.location.href = '#/pages/social/social'
-      } else {
-        // Fallback for other platforms
-        try {
-          uni.navigateTo({
-            url: '/pages/social/social'
-          })
-        } catch (e) {
-          console.log('Navigation error:', e)
-        }
-      }
-    }
-  }
+  methods: {}
 }
 </script>
 
 <style scoped>
-.community-container {
+.social-container {
   width: 100vw;
   height: 100vh;
   background: #fff;
@@ -102,6 +84,7 @@ export default {
   flex-direction: column;
   position: relative;
   overflow: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
 .status-bar {
@@ -114,7 +97,7 @@ export default {
 }
 
 .time {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 32rpx;
   color: #1c2340;
@@ -165,11 +148,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8f8f8;
-  padding: 40rpx 0;
+  background: #ffffff;
+  padding: 120rpx 80rpx 80rpx;
 }
 
-.community-illustration {
+.social-illustration {
   width: 100%;
   max-width: 600rpx;
   height: auto;
@@ -187,66 +170,56 @@ export default {
   left: 0;
   right: 0;
   height: 710rpx;
-  background: linear-gradient(180deg, #FE6587 0%, #F52D6A 100%);
-  border-top-left-radius: 40rpx;
-  border-top-right-radius: 40rpx;
+  background: linear-gradient(135deg, #ff6b9d 0%, #ff4081 100%);
+  border-top-left-radius: 64rpx;
+  border-top-right-radius: 64rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 60rpx 40rpx 120rpx;
+  padding: 120rpx 80rpx 160rpx;
   color: white;
+  text-align: center;
 }
 
 .headline-container {
-  text-align: center;
-  margin-bottom: 40rpx;
+  margin-bottom: 32rpx;
 }
 
 .main-title {
-  display: block;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 56rpx;
-  line-height: 66rpx;
-  color: white;
-  margin-bottom: 8rpx;
-}
-
-.sub-title {
-  display: block;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 56rpx;
-  line-height: 66rpx;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 64rpx;
+  line-height: 80rpx;
+  letter-spacing: -0.02em;
   color: white;
   text-align: center;
 }
 
 .description-container {
-  text-align: center;
   margin-bottom: 80rpx;
+  max-width: 560rpx;
 }
 
-.description-line {
-  display: block;
-  font-family: 'Roboto', sans-serif;
+.description-text {
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 26rpx;
-  line-height: 30rpx;
+  font-size: 32rpx;
+  line-height: 48rpx;
   color: white;
-  margin-bottom: 6rpx;
+  opacity: 0.9;
+  text-align: center;
 }
 
 .pagination-dots {
   display: flex;
-  gap: 20rpx;
+  gap: 24rpx;
   align-items: center;
 }
 
 .dot {
-  width: 30rpx;
-  height: 30rpx;
+  width: 16rpx;
+  height: 16rpx;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
@@ -256,7 +229,7 @@ export default {
 }
 
 .dot-inactive {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .home-indicator {
@@ -276,14 +249,14 @@ export default {
 
 /* Responsive adjustments */
 @media (max-width: 750rpx) {
-  .main-title,
-  .sub-title {
-    font-size: 48rpx;
-    line-height: 56rpx;
+  .main-title {
+    font-size: 56rpx;
+    line-height: 68rpx;
   }
   
-  .description-line {
-    font-size: 24rpx;
+  .description-text {
+    font-size: 28rpx;
+    line-height: 42rpx;
   }
   
   .content-section {
@@ -292,19 +265,23 @@ export default {
   
   .gradient-background {
     height: 650rpx;
-    padding: 50rpx 30rpx 100rpx;
+    padding: 100rpx 60rpx 140rpx;
+  }
+  
+  .illustration-container {
+    padding: 100rpx 60rpx 60rpx;
   }
 }
 
 @media (max-width: 600rpx) {
-  .main-title,
-  .sub-title {
-    font-size: 42rpx;
-    line-height: 48rpx;
+  .main-title {
+    font-size: 48rpx;
+    line-height: 58rpx;
   }
   
-  .description-line {
-    font-size: 22rpx;
+  .description-text {
+    font-size: 26rpx;
+    line-height: 38rpx;
   }
   
   .content-section {
@@ -313,7 +290,11 @@ export default {
   
   .gradient-background {
     height: 600rpx;
-    padding: 40rpx 20rpx 80rpx;
+    padding: 80rpx 40rpx 120rpx;
+  }
+  
+  .illustration-container {
+    padding: 80rpx 40rpx 40rpx;
   }
 }
 </style>

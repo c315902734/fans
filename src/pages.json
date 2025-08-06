@@ -15,6 +15,13 @@
 			}
 		},
 		{
+			"path": "pages/social/social",
+			"style": {
+				"navigationBarTitleText": "Social Features",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uni-app"
