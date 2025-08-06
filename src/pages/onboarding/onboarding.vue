@@ -40,9 +40,19 @@ export default {
   onLoad() {},
   methods: {
     navigateToCommunity() {
-      uni.reLaunch({
-        url: '/pages/community/community'
-      })
+      // Use direct window navigation for H5 platform
+      if (typeof window !== 'undefined') {
+        window.location.href = '#/pages/community/community'
+      } else {
+        // Fallback for other platforms
+        try {
+          uni.navigateTo({
+            url: '/pages/community/community'
+          })
+        } catch (e) {
+          console.log('Navigation error:', e)
+        }
+      }
     }
   }
 }
