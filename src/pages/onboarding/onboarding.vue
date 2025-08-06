@@ -40,7 +40,7 @@ export default {
   onLoad() {},
   methods: {
     navigateToCommunity() {
-      uni.navigateTo({
+      uni.reLaunch({
         url: '/pages/community/community'
       })
     }
