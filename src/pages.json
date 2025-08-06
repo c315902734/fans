@@ -1,9 +1,16 @@
 {
-	"pages": [ 
+	"pages": [
 		{
 			"path": "pages/onboarding/onboarding",
 			"style": {
 				"navigationBarTitleText": "Poxy",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/community/community",
+			"style": {
+				"navigationBarTitleText": "Find Community",
 				"navigationStyle": "custom"
 			}
 		},
