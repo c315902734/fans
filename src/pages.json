@@ -15,6 +15,13 @@
 			}
 		},
 		{
+			"path": "pages/onboarding/onboarding-step3",
+			"style": {
+				"navigationBarTitleText": "Like Comment and Share",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/community/community",
 			"style": {
 				"navigationBarTitleText": "Find Community",
