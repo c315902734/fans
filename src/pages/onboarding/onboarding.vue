@@ -39,7 +39,7 @@ export default {
   },
   onLoad() {},
   methods: {
-    navigateToCommunity() {
+    navigateToNextStep() {
       // Navigate to second onboarding step
       try {
         uni.navigateTo({
