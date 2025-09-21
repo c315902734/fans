@@ -8,6 +8,13 @@
 			}
 		},
 		{
+			"path": "pages/onboarding/onboarding-step2",
+			"style": {
+				"navigationBarTitleText": "Find Community",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/community/community",
 			"style": {
 				"navigationBarTitleText": "Find Community",
