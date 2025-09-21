@@ -1,5 +1,5 @@
 <template>
-  <view class="onboarding-step3">
+  <view class="onboarding-step3" @click="goToApp">
     <!-- Status bar -->
     <view class="status-bar">
       <view class="status-time">9:41</view>
