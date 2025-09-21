@@ -69,14 +69,14 @@ export default {
   },
   methods: {
     goToNextStep() {
-      // Navigate to community page or next onboarding step
+      // Navigate to third onboarding step
       uni.navigateTo({
-        url: '/pages/community/community'
+        url: '/pages/onboarding/onboarding-step3'
       })
     }
   },
   mounted() {
-    // Auto-advance after 3 seconds or add swipe gestures
+    // Auto-advance after 4 seconds
     setTimeout(() => {
       this.goToNextStep()
     }, 4000)
