@@ -1,5 +1,5 @@
 <template>
-  <view class="onboarding-container" @click="navigateToCommunity">
+  <view class="onboarding-container" @click="navigateToNextStep">
     <view class="content-wrapper">
       <view class="logo-container">
         <view class="logo-circle">
