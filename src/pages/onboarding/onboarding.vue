@@ -40,18 +40,17 @@ export default {
   onLoad() {},
   methods: {
     navigateToCommunity() {
-      // Use direct window navigation for H5 platform
-      if (typeof window !== 'undefined') {
-        window.location.href = '#/pages/community/community'
-      } else {
-        // Fallback for other platforms
-        try {
-          uni.navigateTo({
-            url: '/pages/community/community'
-          })
-        } catch (e) {
-          console.log('Navigation error:', e)
-        }
+      // Navigate to second onboarding step
+      try {
+        uni.navigateTo({
+          url: '/pages/onboarding/onboarding-step2'
+        })
+      } catch (e) {
+        console.log('Navigation error:', e)
+        // Fallback to community if step 2 fails
+        uni.navigateTo({
+          url: '/pages/community/community'
+        })
       }
     }
   }
