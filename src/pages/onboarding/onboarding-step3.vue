@@ -69,14 +69,14 @@ export default {
   },
   methods: {
     goToApp() {
-      // Navigate to main app (community page or main index)
-      uni.redirectTo({
-        url: '/pages/community/community'
+      // Navigate to sign-in page
+      uni.navigateTo({
+        url: '/pages/auth/signin'
       })
     }
   },
   mounted() {
-    // Auto-advance after 4 seconds to complete onboarding
+    // Auto-advance after 4 seconds to sign-in
     setTimeout(() => {
       this.goToApp()
     }, 4000)
