@@ -151,8 +151,10 @@ export default {
       })
     },
     goToSignUp() {
-      // Navigate to sign up page (could be a separate page)
-      console.log('Navigate to sign up')
+      // Navigate to sign up page
+      uni.navigateTo({
+        url: '/pages/auth/signup'
+      })
     }
   }
 }
