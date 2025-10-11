@@ -22,6 +22,13 @@
 			}
 		},
 		{
+			"path": "pages/auth/signin",
+			"style": {
+				"navigationBarTitleText": "Sign in",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/community/community",
 			"style": {
 				"navigationBarTitleText": "Find Community",
